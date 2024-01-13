@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Reservation Form</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Reservation Form</h1>
+        <p id="description">Complete and submit the form to book a room at our hotel!</p>
+    </header>
+    <form id="survey-form">
+        <fieldset>
+            <legend>Your data</legend>
+            <label id="name-label" class="block" for="name">Name</label>
+            <input id="name" class="block" type="text" placeholder="Enter your name" required />
+            <label id="surname-label" class="block" for="surname">Last name</label>
+            <input id="surname" class="block" type="text" placeholder="Enter your last name" required />
+            <label id="DOB-label" class="block" for="DOB">Date of birth</label>
+            <input id="DOB" class="block" type="date" required />
+            <label id="email-label" class="block" for="email">Email</label>
+            <input id="email" class="block" type="email" placeholder="Enter your email" required />
+        </fieldset>
+
+        <fieldset>
+            <legend>Reservation details</legend>
+            <label for="check-in" class="block">Check-in date date</label>
+            <input id="check-in" class="block" type="date" required />
+            <label for="check-out" class="block">Check-out date</label>
+            <input id="check-out" class="block" type="date" required />
+            <label id="number-label" class="block" for="number">Total adults </label>
+            <input id="number" class="block" type="number" min="0" max="10" placeholder="Enter a number" required />
+
+            <label id="number-label" class="block" for="number">Total children </label>
+            <input id="number" class="block" type="number" min="0" max="10" placeholder="Enter a number" required />
+
+            <div class="block">Room preference</div>
+            <input id="standard-room" type="radio" name="room-type" value="1" checked />
+            <label for="standard-room" class="inline">Standard</label>
+            <input id="deluxe-room" type="radio" name="room-type" value="2" />
+            <label for="deluxe-room">Deluxe</label>
+            <input id="suite-room" type="radio" name="room-type" value="3" />
+            <label for="suite-room">Suite</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Other info</legend>
+            <label for="dropdown" class="block">Main reason for your stay</label>
+            <select id="dropdown" class="block">
+                <option value="">Select one</option>
+                <option value="1">Business trip</option>
+                <option value="2">Family trip</option>
+                <option value="3">Holiday with friends</option>
+                <option value="4">Attend an event or a conference</option>
+                <option value="5">Other</option>
+            </select>
+            <label for="requests" class="block">Are there specific requests?</label>
+            <textarea class="block" rows="4" cols="40" placeholder="Write here any specific request you have"></textarea>
+        </fieldset>
+
+        <label class="block" for="legal-terms"><input id="legal-terms" type="checkbox" value="legal-terms" required>I agree with <a href="#"">terms and conditions</a></label>
+        <label class="block" for="newsletter"><input type="checkbox" id="newsletter" value="newsletter">I want to receive your newsletter</label>
+        <button class="center" id="submit" type="submit">Submit</button>
+    </form>
+    <footer>
+        <p>Image by <a href="https://www.pexels.com/it-it/@laura-paredis-1047081/">Laura Paredis</a> on Pexels</p>
+    </footer>
+</body>
+
+</html>
+
